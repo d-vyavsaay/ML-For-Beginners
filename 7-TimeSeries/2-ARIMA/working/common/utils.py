@@ -15,7 +15,7 @@ def load_data(data_dir):
     energy.index = energy['timestamp']
     energy = energy.reindex(pd.date_range(min(energy['timestamp']),
                                           max(energy['timestamp']),
-                                          freq='H'))
+                                          freq='h'))
     energy = energy.drop('timestamp', axis=1)
 
     return energy
